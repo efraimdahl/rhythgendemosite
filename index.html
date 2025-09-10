@@ -66,15 +66,15 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/efraimdahl/RhythGen" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="far fa-file-code"></i></span>
-                    <span>Source Code</span>
+                    <span>Source</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#videoshow" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="far fa-file-video"></i></span>
-                    <span>Video</span>
+                  <a href="https://huggingface.co/efraimdahl/RhythGen" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="far fa-file-archive"></i></span>
+                    <span>Weights</span>
                   </a>
                 </span>
               </div>
@@ -136,10 +136,62 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Control over rhythmic complexity</h1>
+          <h1 class="title is-1 publication-title">Section-wise control over rhythmic complexity</h1>
           <div class="container" id="main-container">
             <main>
-              <p>Demo with multiple ABC files, each with play and download controls.</p>
+
+              <p>Demonstration of syncopation control, with target syncopation (s) annotated per bar.</p>
+
+              <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper2" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio2" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download2" class="download-btn">Download</button>
+                </div>
+              </div>
+
+
+
+              <p>Demonstration of syncopation control, with target syncopation (s) annotated per bar.</p>
+
+              <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper1" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio1" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download1" class="download-btn">Download</button>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Section-wise control over note density</h1>
+          <div class="container" id="main-container">
+            <main>
+
+              <p>Demonstration of note density control, with target density (td) annotated per bar. A smaller value
+                indicates higher note density</p>
 
               <div class="tune-wrapper">
                 <!-- viewport: fixed max height, scrolls vertically if content is tall -->
@@ -157,12 +209,131 @@
               </div>
 
 
+
+              <p>Demonstration of note density control, with target density (td) annotated per bar.</p>
+
+              <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper3" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio3" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download3" class="download-btn">Download</button>
+                </div>
+              </div>
             </main>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
+  <section>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Highly Syncopated Right Hand Ragtime Sections</h1>
+          <div class="container" id="main-container">
+            <main>
+              <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper4" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio4" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download4" class="download-btn">Download</button>
+                </div>
+              </div>
+
+              <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper5" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio5" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download5" class="download-btn">Download</button>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Right Hand Ragtime Sections with low syncopation</h1>
+          <div class="container" id="main-container">
+            <main>
+              <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper6" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio6" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download6" class="download-btn">Download</button>
+                </div>
+              </div>
+
+              <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper7" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio7" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download7" class="download-btn">Download</button>
+                </div>
+              </div>
+                <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper8" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio8" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download8" class="download-btn">Download</button>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
   <!-- Paper poster -->
