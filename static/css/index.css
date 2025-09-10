@@ -1,0 +1,251 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.scrollable-paper {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ccc;   /* optional: gives a clear boundary */
+  padding: 10px;            /* optional: breathing space */
+}
+
+/* wrapper spacing */
+.tune-wrapper {
+  margin-bottom: 24px;
+}
+
+/* the scrolling viewport that contains the rendered sheet */
+.paper-viewport {
+  max-height: 500px;        /* limit height */
+  overflow-y: auto;         /* vertical scroll if needed */
+  overflow-x: hidden;       /* avoid horizontal scroll */
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px;             /* optional padding for breathing room */
+  background: white;
+}
+
+/* the direct container where abcjs renders the SVG */
+.paper-content {
+  width: 100%;
+}
+
+/* make sure any injected SVG behaves nicely inside the viewport */
+.paper-viewport svg {
+  display: block;           /* avoid inline whitespace issues */
+  width: 100%;              /* responsive width */
+  height: auto !important;  /* allow natural height so vertical scroll works */
+  position: static !important; /* override any absolute positioning if abcjs set it */
+}
+
+/* keep audio controls / buttons visible below the viewport */
+.audio-controls {
+  margin-top: 8px;
+}
+
+.tune-actions {
+  margin-top: 8px;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.expdiv{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  max-width: 800px; 
+  margin-bottom: 20px; 
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.expdiv img{
+  max-width:500px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.publication-title {
+}
+
+.title{
+  margin-top:10px;
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.space-around{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.waveform{
+  padding-left: 5rem;
+  padding-right:5rem;
+  padding-bottom: 2rem;
+}
+.triple-column{
+  flex: content;
+  flex-direction: row;
+  background-color: rgb(230, 230, 230);
+  padding-top:3rem;
+  padding-bottom:3rem;
+  padding-right:1rem;
+  padding-left:1rem;
+  display:flex;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.side_audio{
+  min-width: 400px;
+}
+
+.narrow{
+  max-width: 600px;
+  width:600px;
+  margin:auto;
+  text-align: center;
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+  background-color: #ac0707;
+}
+
+.wavform{
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+  padding: 5px;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.results-carousel img{
+  
+  margin-left:auto;
+  margin-right:auto;
+  max-width:800px;
+  padding-bottom:2rem;
+}
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.eql-cntrb { 
+  font-size: smaller;
+}

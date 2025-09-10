@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="RhythGen - Controlling Rhythmic Complexity in generated music">
+  <meta property="og:title" content="RhythGen - Controlling Rhythmic Complexity in generated music" />
+  <meta property="og:description" content="RhythGen - Controlling Rhythmic Complexity in generated music" />
+  <meta property="og:url" content="https://efraimdahl.github.io/rhythgendemosite/" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
+  <meta property="og:image" content="static/image/setup.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Symbolic Music Generation Rhythmic Complexity Syncopation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>RhythGen Demo Page</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" type="text/css" href="static/css/abcjs.css">
+
+
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+
+  <script src="static/js/abcjs.js"> </script>
+  <script src="static/js/index.js"></script>
+
+</head>
+
+<body onload="load()">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">RhythGen Demo Page</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/efraim-dahl-629aba177/" target="_blank">Efraim Dahl</a>, </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=F74qwNQAAAAJ&hl=en" target="_blank">Peter van
+                  Kranenburg</a>, </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=t0kaM-YAAAAJ&hl=en" target="_blank">Anja
+                  Volk</a></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Utrecht University<br>Information and Computing Sciences</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="far fa-file-code"></i></span>
+                    <span>Source Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#videoshow" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="far fa-file-video"></i></span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Music is essential in video games; it enhances the immersion and engagement of players. However,
+              players often disengage from game music due to excessive repetition or differing musical prefer-
+              ences. This issue is especially problematic in serious games for therapeutic use, such as Musical At-
+              tention Control Training (MACT). In these cases, sustained engagement and interaction with the
+              game music are essential for the intervention. To improve therapeutic outcomes, these applications
+              often use dynamic difficulty adjustment. By varying the music’s cognitive load, they stimulate at-
+              tention and working memory. In rhythmic training, this is achieved by adjusting levels of syncopa-
+              tion. Controllable automatic music generation may offer a scalable solution. It enables the creation
+              of a greater variety of music that can be adapted through syncopation to a player’s abilities, ulti-
+              mately improving engagement and intervention effects.<br><br>
+
+              To this end, we introduce RhythGen, a novel transformer-based music generator that extends the
+              pretrained NotaGen model with time-varying control over rhythmic complexity. The model is de-
+              signed for serious games. Its primary control mechanism targets syncopation levels to adjust the
+              music to a player’s training needs and abilities. We implement this via a custom, lightweight pro-
+              cedure, which introduces time-varying control over rhythmic complexity through fine-tuning on
+              1,000 - 1,500 songs. Our procedure incorporates a variety of control representations and condition-
+              ing mechanisms, including the novel attention modulation mechanism. We compare this mecha-
+              nism against established methods such as in-attention and in-text conditioning. RhythGen is condi-
+              tioned using one of several control representations, including note-density and syncopation labels,
+              as well as weight profiles derived from Inner Metric Analysis (IMA).<br><br>
+
+              Our evaluation explores the tradeoff between generation quality and control adherence across these
+              conditioning methods. We find that models using in-attention conditioning with discrete synco-
+              pation labels, targeted voice-specific labelling, and training generate music with specified rhyth-
+              mic complexity. In contrast, in-text conditioning is largely ineffective. Our novel attention mod-
+              ulation mechanism successfully controls note-density when used with IMA weight profiles, but
+              fails to capture syncopation. Finally, a user study (n=40) empirically confirms that our in-attention-
+              conditioned models can produce enjoyable music. This music has noticeable variations in rhythmic
+              complexity and recognizable section boundaries, demonstrating RhythGen’s potential for use in
+              MACT and beyond.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+  <section>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Control over rhythmic complexity</h1>
+          <div class="container" id="main-container">
+            <main>
+              <p>Demo with multiple ABC files, each with play and download controls.</p>
+
+              <div class="tune-wrapper">
+                <!-- viewport: fixed max height, scrolls vertically if content is tall -->
+                <div class="paper-viewport" aria-label="sheet-music viewport">
+                  <div id="paper0" class="paper-content"></div>
+                </div>
+
+                <!-- audio/player sits below viewport so it stays visible -->
+                <div id="audio0" class="audio-controls"></div>
+
+                <!-- actions -->
+                <div class="tune-actions">
+                  <button id="download0" class="download-btn">Download</button>
+                </div>
+              </div>
+
+
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Paper poster -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
